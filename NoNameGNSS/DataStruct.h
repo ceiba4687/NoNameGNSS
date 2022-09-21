@@ -2,7 +2,7 @@
 //data and struct used in the GNSS
 const double GM = 3.986005e14;
 
-struct RINEXNAV
+struct RINEX_Nav
 
 {
 	int PRN;
@@ -17,8 +17,8 @@ struct RINEXNAV
 
 struct GPSTime
 {
-	int weekno;
-	double weekSecond;
+	int WeekNo;
+	double WeekSecond;
 };
 
 struct NTime
