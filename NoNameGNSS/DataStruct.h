@@ -2,7 +2,7 @@
 //data and struct used in the GNSS
 const double GM = 3.986005e14;
 
-struct RINEX_Nav
+struct BRDC_GPS
 
 {
 	int PRN;
@@ -13,6 +13,8 @@ struct RINEX_Nav
 	double i0, Crc, omega, OMEGAdot;// ORBIT - 4
 	double IDOT, GpsWeekNumber, L2C, L2P;// ORBIT - 5
 	double SatAccuracy, SatHealth, TGD, IODC;// ORBIT - 6
+
+	BRDC_GPS() = default;
 };
 
 struct GPSTime
