@@ -5,12 +5,12 @@
 
 
 using namespace std;
-void ReadNav_G(string buf);
+void read_nav_gps(string, BRDC_GPS);
 
-int ReadRINEX_Nav(string File)
+int read_rinex_nav(string filename)
 {
 	ifstream fin;
-	fin.open(File);
+	fin.open(filename);
 	string buf;
 	BRDC_GPS brdc{};
 	while (!fin.eof())
@@ -25,14 +25,17 @@ int ReadRINEX_Nav(string File)
 	{
 		getline(fin, buf);
 		if (buf.starts_with("G"))
-			ReadNav_G(buf);
+			read_nav_gps(buf,brdc);
 		fin.clear();
 	}
 	fin.close();
 	return 0;
 }
 
-void ReadNav_G(string buf)
+void read_nav_gps(string buf, BRDC_GPS brdc)
 {
-	cout << buf << endl;
+	cout << buf.substr(4, 19) << endl;
+	brdc.a0 = stod(buf.substr(23, 19));
+	brdc.a1 = stod(buf.substr(42, 19));
+	brdc.a2 = stod(buf.substr(61, 19));
 }

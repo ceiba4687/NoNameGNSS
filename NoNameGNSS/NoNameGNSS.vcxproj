@@ -128,11 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DataTrans.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ReadRINEX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStruct.h" />
+    <ClInclude Include="DataTrans.h" />
     <ClInclude Include="ReadRINEX.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

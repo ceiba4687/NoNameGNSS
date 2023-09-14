@@ -10,6 +10,6 @@ int main()
 	string RNXNavFile;
 	cout << "Input Nav File:";
 	cin >> RNXNavFile;
-	ReadRINEX_Nav(RNXNavFile);
+	read_rinex_nav(RNXNavFile);
 	return 0;
 }

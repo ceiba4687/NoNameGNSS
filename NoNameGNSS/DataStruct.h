@@ -32,3 +32,19 @@ struct NTime
 	int Minute;
 	double Second;
 };
+
+struct Pos
+{
+	double X;
+	double Y;
+	double Z;
+};
+
+class Satellite
+{
+	GPSTime time;
+	Pos Sate_Pos[];
+public:
+
+
+};

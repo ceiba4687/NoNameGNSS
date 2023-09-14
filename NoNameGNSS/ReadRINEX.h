@@ -1,4 +1,4 @@
 #pragma once
 #include<string>
 using namespace std;
-int ReadRINEX_Nav(string File);
+int read_rinex_nav(string File);
